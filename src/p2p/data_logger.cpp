@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2016, The Monero Project
+// Copyright (c) 2014-2016, The Singularity Project
 // 
 // All rights reserved.
 // 
@@ -64,19 +64,19 @@ namespace net_utils
 		boost::lock_guard<boost::mutex> lock(mMutex); // lock
 		
 		// prepare all the files for given data channels:
-		mFilesMap["peers"] = data_logger::fileData("log/dr-monero/peers.data");
-		mFilesMap["download"] = data_logger::fileData("log/dr-monero/net/in-all.data");
-		mFilesMap["upload"] = data_logger::fileData("log/dr-monero/net/out-all.data");
-		mFilesMap["request"] = data_logger::fileData("log/dr-monero/net/req-all.data");
-		mFilesMap["sleep_down"] = data_logger::fileData("log/dr-monero/down_sleep_log.data");
-		mFilesMap["sleep_up"] = data_logger::fileData("log/dr-monero/up_sleep_log.data");
-		mFilesMap["calc_time"] = data_logger::fileData("log/dr-monero/get_objects_calc_time.data");
-		mFilesMap["blockchain_processing_time"] = data_logger::fileData("log/dr-monero/blockchain_log.data");
-		mFilesMap["block_processing"] = data_logger::fileData("log/dr-monero/block_proc.data");
+		mFilesMap["peers"] = data_logger::fileData("log/dr-singularity/peers.data");
+		mFilesMap["download"] = data_logger::fileData("log/dr-singularity/net/in-all.data");
+		mFilesMap["upload"] = data_logger::fileData("log/dr-singularity/net/out-all.data");
+		mFilesMap["request"] = data_logger::fileData("log/dr-singularity/net/req-all.data");
+		mFilesMap["sleep_down"] = data_logger::fileData("log/dr-singularity/down_sleep_log.data");
+		mFilesMap["sleep_up"] = data_logger::fileData("log/dr-singularity/up_sleep_log.data");
+		mFilesMap["calc_time"] = data_logger::fileData("log/dr-singularity/get_objects_calc_time.data");
+		mFilesMap["blockchain_processing_time"] = data_logger::fileData("log/dr-singularity/blockchain_log.data");
+		mFilesMap["block_processing"] = data_logger::fileData("log/dr-singularity/block_proc.data");
 		
-		mFilesMap["peers_limit"] = data_logger::fileData("log/dr-monero/peers_limit.info");
-		mFilesMap["download_limit"] = data_logger::fileData("log/dr-monero/limit_down.info");
-		mFilesMap["upload_limit"] = data_logger::fileData("log/dr-monero/limit_up.info");
+		mFilesMap["peers_limit"] = data_logger::fileData("log/dr-singularity/peers_limit.info");
+		mFilesMap["download_limit"] = data_logger::fileData("log/dr-singularity/limit_down.info");
+		mFilesMap["upload_limit"] = data_logger::fileData("log/dr-singularity/limit_up.info");
 		
 		mFilesMap["peers_limit"].mLimitFile = true;
 		mFilesMap["download_limit"].mLimitFile = true;
@@ -153,7 +153,7 @@ namespace net_utils
 		_dbg2_c("dbg/data","saving to files");
 		boost::lock_guard<boost::mutex> lock(mMutex);
 		if (m_state != data_logger_state::state_ready_to_use) { _info_c("dbg/data","Data logger is not ready, returning."); return; }
-		nOT::nUtils::cFilesystemUtils::CreateDirTree("log/dr-monero/net/");
+		nOT::nUtils::cFilesystemUtils::CreateDirTree("log/dr-singularity/net/");
 		for (auto &element : mFilesMap)
 		{
 			element.second.save();

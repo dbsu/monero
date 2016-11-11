@@ -1,8 +1,8 @@
-name: monero
+name: singularity
 version: 0  # TODO: change this to release version in CI builds
-summary: "Monero: the secure, private, untraceable cryptocurrency https://getmonero.org"
+summary: "Singularity: the secure, private, untraceable cryptocurrency https://getsingularity.org"
 description: |
-    Monero is a private, secure, untraceable, decentralised digital currency.
+    Singularity is a private, secure, untraceable, decentralised digital currency.
     You are your bank, you control your funds, and nobody can trace your transfers
     unless you allow them to do so.
 grade: devel
@@ -19,7 +19,7 @@ apps:
     log:
         command: log.bash
 
-    monero:
+    singularity:
         command: wallet.bash
         plugs:
             - network

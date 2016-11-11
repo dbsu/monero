@@ -1,4 +1,4 @@
-# Copyright (c) 2014-2016, The Monero Project
+# Copyright (c) 2014-2016, The Singularity Project
 #
 # All rights reserved.
 #
@@ -30,7 +30,7 @@
 
 cmake_minimum_required(VERSION 2.8.7)
 
-project(monero)
+project(singularity)
 
 function (die msg)
   if (NOT WIN32)

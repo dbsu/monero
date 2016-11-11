@@ -1,4 +1,4 @@
-# Copyright (c) 2014-2016, The Monero Project
+# Copyright (c) 2014-2016, The Singularity Project
 #
 # All rights reserved.
 #
@@ -36,9 +36,9 @@ set(rpc_private_headers
   core_rpc_server_commands_defs.h
   core_rpc_server_error_codes.h)
 
-monero_private_headers(rpc
+singularity_private_headers(rpc
   ${rpc_private_headers})
-monero_add_library(rpc
+singularity_add_library(rpc
   ${rpc_sources}
   ${rpc_headers}
   ${rpc_private_headers})

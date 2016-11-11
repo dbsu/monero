@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2016, The Monero Project
+// Copyright (c) 2014-2016, The Singularity Project
 //
 // All rights reserved.
 //
@@ -107,7 +107,7 @@ namespace wallet_args
         return boost::none;
       }
       // epee didn't find path to executable from argv[0], so use this default file name.
-      log_file_name = "monero-wallet-cli.log";
+      log_file_name = "singularity-wallet-cli.log";
       // The full path will use cwd because epee also returned an empty default log folder.
     }
     default_log /= log_file_name;
@@ -116,7 +116,7 @@ namespace wallet_args
     command_line::add_arg(desc_params, arg_log_level);
     command_line::add_arg(desc_params, arg_max_concurrency);
 
-    i18n_set_language("translations", "monero", lang);
+    i18n_set_language("translations", "singularity", lang);
 
     po::options_description desc_all;
     desc_all.add(desc_general).add(desc_params);
@@ -127,14 +127,14 @@ namespace wallet_args
 
       if (command_line::get_arg(vm, command_line::arg_help))
       {
-        tools::msg_writer() << "Monero '" << MONERO_RELEASE_NAME << "' (v" << MONERO_VERSION_FULL << ")";
+        tools::msg_writer() << "Singularity '" << MONERO_RELEASE_NAME << "' (v" << MONERO_VERSION_FULL << ")";
         tools::msg_writer() << wallet_args::tr("Usage:") << ' ' << usage;
         tools::msg_writer() << desc_all;
         return false;
       }
       else if (command_line::get_arg(vm, command_line::arg_version))
       {
-        tools::msg_writer() << "Monero '" << MONERO_RELEASE_NAME << "' (v" << MONERO_VERSION_FULL << ")";
+        tools::msg_writer() << "Singularity '" << MONERO_RELEASE_NAME << "' (v" << MONERO_VERSION_FULL << ")";
         return false;
       }
 
@@ -147,8 +147,8 @@ namespace wallet_args
       return boost::none;
 
     // log_file_path
-    //   default: < argv[0] directory >/monero-wallet-cli.log
-    //     so if ran as "monero-wallet-cli" (no path), log file will be in cwd
+    //   default: < argv[0] directory >/singularity-wallet-cli.log
+    //     so if ran as "singularity-wallet-cli" (no path), log file will be in cwd
     //
     //   if log-file argument given:
     //     absolute path
@@ -170,7 +170,7 @@ namespace wallet_args
     if(command_line::has_arg(vm, arg_max_concurrency))
       tools::set_max_concurrency(command_line::get_arg(vm, arg_max_concurrency));
 
-    tools::scoped_message_writer(epee::log_space::console_color_white, true) << "Monero '" << MONERO_RELEASE_NAME << "' (v" << MONERO_VERSION_FULL << ")";
+    tools::scoped_message_writer(epee::log_space::console_color_white, true) << "Singularity '" << MONERO_RELEASE_NAME << "' (v" << MONERO_VERSION_FULL << ")";
 
     if(command_line::has_arg(vm, arg_log_level))
       log_level = command_line::get_arg(vm, arg_log_level);

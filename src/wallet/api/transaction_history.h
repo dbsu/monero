@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2016, The Monero Project
+// Copyright (c) 2014-2016, The Singularity Project
 //
 // All rights reserved.
 //
@@ -31,7 +31,7 @@
 #include "wallet/wallet2_api.h"
 #include <boost/thread/shared_mutex.hpp>
 
-namespace Bitmonero {
+namespace Bitsingularity {
 
 class TransactionInfo;
 class WalletImpl;

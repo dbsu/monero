@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2016, The Monero Project
+// Copyright (c) 2014-2016, The Singularity Project
 //
 // All rights reserved.
 //
@@ -40,7 +40,7 @@
 #include <boost/thread/condition_variable.hpp>
 
 
-namespace Bitmonero {
+namespace Bitsingularity {
 class TransactionHistoryImpl;
 class PendingTransactionImpl;
 struct Wallet2CallbackImpl;

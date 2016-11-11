@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2016, The Monero Project
+// Copyright (c) 2014-2016, The Singularity Project
 // 
 // All rights reserved.
 // 
@@ -71,8 +71,8 @@ typedef cryptonote::simple_wallet sw;
 
 #define DEFAULT_MIX 4
 
-#define KEY_IMAGE_EXPORT_FILE_MAGIC "Monero key image export\002"
-#define OUTPUT_EXPORT_FILE_MAGIC "Monero output export\002"
+#define KEY_IMAGE_EXPORT_FILE_MAGIC "Singularity key image export\002"
+#define OUTPUT_EXPORT_FILE_MAGIC "Singularity output export\002"
 
 #define LOCK_IDLE_SCOPE() \
   bool auto_refresh_enabled = m_auto_refresh_enabled.load(std::memory_order_relaxed); \
@@ -1315,7 +1315,7 @@ bool simple_wallet::new_wallet(const boost::program_options::variables_map& vm,
     tr("Your wallet has been generated!\n"
     "To start synchronizing with the daemon, use \"refresh\" command.\n"
     "Use \"help\" command to see the list of available commands.\n"
-    "Always use \"exit\" command when closing monero-wallet-cli to save your\n"
+    "Always use \"exit\" command when closing singularity-wallet-cli to save your\n"
     "current session's state. Otherwise, you might need to synchronize \n"
     "your wallet again (your wallet keys are NOT at risk in any case).\n")
   ;
@@ -1951,7 +1951,7 @@ bool simple_wallet::get_address_from_str(const std::string &str, cryptonote::acc
           std::stringstream prompt;
           prompt << tr("For URL: ") << url
                  << ", " << dnssec_str << std::endl
-                 << tr(" Monero Address = ") << addresses_from_dns[0]
+                 << tr(" Singularity Address = ") << addresses_from_dns[0]
                  << std::endl
                  << tr("Is this OK? (Y/n) ")
           ;
@@ -1971,13 +1971,13 @@ bool simple_wallet::get_address_from_str(const std::string &str, cryptonote::acc
         }
         else
         {
-          fail_msg_writer() << tr("failed to get a Monero address from: ") << url;
+          fail_msg_writer() << tr("failed to get a Singularity address from: ") << url;
           return false;
         }
       }
       else if (addresses_from_dns.size() > 1)
       {
-        fail_msg_writer() << tr("not yet supported: Multiple Monero addresses found for given URL: ") << url;
+        fail_msg_writer() << tr("not yet supported: Multiple Singularity addresses found for given URL: ") << url;
         return false;
       }
       else
@@ -2213,14 +2213,14 @@ bool simple_wallet::transfer_main(int transfer_type, const std::vector<std::stri
     // actually commit the transactions
     if (m_wallet->watch_only())
     {
-      bool r = m_wallet->save_tx(ptx_vector, "unsigned_monero_tx");
+      bool r = m_wallet->save_tx(ptx_vector, "unsigned_singularity_tx");
       if (!r)
       {
         fail_msg_writer() << tr("Failed to write transaction(s) to file");
       }
       else
       {
-        success_msg_writer(true) << tr("Unsigned transaction(s) successfully written to file: ") << "unsigned_monero_tx";
+        success_msg_writer(true) << tr("Unsigned transaction(s) successfully written to file: ") << "unsigned_singularity_tx";
       }
     }
     else while (!ptx_vector.empty())
@@ -2391,14 +2391,14 @@ bool simple_wallet::sweep_unmixable(const std::vector<std::string> &args_)
     // actually commit the transactions
     if (m_wallet->watch_only())
     {
-      bool r = m_wallet->save_tx(ptx_vector, "unsigned_monero_tx");
+      bool r = m_wallet->save_tx(ptx_vector, "unsigned_singularity_tx");
       if (!r)
       {
         fail_msg_writer() << tr("Failed to write transaction(s) to file");
       }
       else
       {
-        success_msg_writer(true) << tr("Unsigned transaction(s) successfully written to file: ") << "unsigned_monero_tx";
+        success_msg_writer(true) << tr("Unsigned transaction(s) successfully written to file: ") << "unsigned_singularity_tx";
       }
     }
     else while (!ptx_vector.empty())
@@ -2650,14 +2650,14 @@ bool simple_wallet::sweep_all(const std::vector<std::string> &args_)
     // actually commit the transactions
     if (m_wallet->watch_only())
     {
-      bool r = m_wallet->save_tx(ptx_vector, "unsigned_monero_tx");
+      bool r = m_wallet->save_tx(ptx_vector, "unsigned_singularity_tx");
       if (!r)
       {
         fail_msg_writer() << tr("Failed to write transaction(s) to file");
       }
       else
       {
-        success_msg_writer(true) << tr("Unsigned transaction(s) successfully written to file: ") << "unsigned_monero_tx";
+        success_msg_writer(true) << tr("Unsigned transaction(s) successfully written to file: ") << "unsigned_singularity_tx";
       }
     }
     else while (!ptx_vector.empty())
@@ -2843,7 +2843,7 @@ bool simple_wallet::sign_transfer(const std::vector<std::string> &args_)
 
   try
   {
-    bool r = m_wallet->sign_tx("unsigned_monero_tx", "signed_monero_tx", [&](const tools::wallet2::unsigned_tx_set &tx){ return accept_loaded_tx(tx); });
+    bool r = m_wallet->sign_tx("unsigned_singularity_tx", "signed_singularity_tx", [&](const tools::wallet2::unsigned_tx_set &tx){ return accept_loaded_tx(tx); });
     if (!r)
     {
       fail_msg_writer() << tr("Failed to sign transaction");
@@ -2856,7 +2856,7 @@ bool simple_wallet::sign_transfer(const std::vector<std::string> &args_)
     return true;
   }
 
-  success_msg_writer(true) << tr("Transaction successfully signed to file: ") << "signed_monero_tx";
+  success_msg_writer(true) << tr("Transaction successfully signed to file: ") << "signed_singularity_tx";
   return true;
 }
 //----------------------------------------------------------------------------------------------------
@@ -2868,7 +2868,7 @@ bool simple_wallet::submit_transfer(const std::vector<std::string> &args_)
   try
   {
     std::vector<tools::wallet2::pending_tx> ptx_vector;
-    bool r = m_wallet->load_tx("signed_monero_tx", ptx_vector, [&](const tools::wallet2::signed_tx_set &tx){ return accept_loaded_tx(tx); });
+    bool r = m_wallet->load_tx("signed_singularity_tx", ptx_vector, [&](const tools::wallet2::signed_tx_set &tx){ return accept_loaded_tx(tx); });
     if (!r)
     {
       fail_msg_writer() << tr("Failed to load transaction from file");
@@ -3928,7 +3928,7 @@ int main(int argc, char* argv[])
 
   const auto vm = wallet_args::main(
    argc, argv,
-   "monero-wallet-cli [--wallet-file=<file>|--generate-new-wallet=<file>] [<COMMAND>]",
+   "singularity-wallet-cli [--wallet-file=<file>|--generate-new-wallet=<file>] [<COMMAND>]",
     desc_params,
     positional_options
   );

@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2016, The Monero Project
+// Copyright (c) 2014-2016, The Singularity Project
 //
 // All rights reserved.
 //
@@ -224,17 +224,17 @@ namespace cryptonote
 
   bool checkpoints::load_checkpoints_from_dns(bool testnet)
   {
-    // All four MoneroPulse domains have DNSSEC on and valid
-    static const std::vector<std::string> dns_urls = { "checkpoints.moneropulse.se"
-						     , "checkpoints.moneropulse.org"
-						     , "checkpoints.moneropulse.net"
-						     , "checkpoints.moneropulse.co"
+    // All four SingularityPulse domains have DNSSEC on and valid
+    static const std::vector<std::string> dns_urls = { "checkpoints.singularitypulse.se"
+						     , "checkpoints.singularitypulse.org"
+						     , "checkpoints.singularitypulse.net"
+						     , "checkpoints.singularitypulse.co"
     };
 
-    static const std::vector<std::string> testnet_dns_urls = { "testpoints.moneropulse.se"
-							     , "testpoints.moneropulse.org"
-							     , "testpoints.moneropulse.net"
-							     , "testpoints.moneropulse.co"
+    static const std::vector<std::string> testnet_dns_urls = { "testpoints.singularitypulse.se"
+							     , "testpoints.singularitypulse.org"
+							     , "testpoints.singularitypulse.net"
+							     , "testpoints.singularitypulse.co"
     };
 
     std::vector<std::vector<std::string> > records;
@@ -291,7 +291,7 @@ namespace cryptonote
 
     if (num_valid_records < 2)
     {
-      LOG_PRINT_L0("WARNING: no two valid MoneroPulse DNS checkpoint records were received");
+      LOG_PRINT_L0("WARNING: no two valid SingularityPulse DNS checkpoint records were received");
       return true;
     }
 
@@ -313,7 +313,7 @@ namespace cryptonote
 
     if (good_records_index < 0)
     {
-      LOG_PRINT_L0("WARNING: no two MoneroPulse DNS checkpoint records matched");
+      LOG_PRINT_L0("WARNING: no two SingularityPulse DNS checkpoint records matched");
       return true;
     }
 

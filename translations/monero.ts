@@ -2,7 +2,7 @@
 <!DOCTYPE TS>
 <TS version="2.0">
 <context>
-    <name>Bitmonero::PendingTransactionImpl</name>
+    <name>Bitsingularity::PendingTransactionImpl</name>
     <message>
         <location filename="../src/wallet/api/pending_transaction.cpp" line="95"/>
         <source>daemon is busy. Please try again later.</source>
@@ -30,7 +30,7 @@
     </message>
 </context>
 <context>
-    <name>Bitmonero::WalletImpl</name>
+    <name>Bitsingularity::WalletImpl</name>
     <message>
         <location filename="../src/wallet/api/wallet.cpp" line="593"/>
         <source>payment id has invalid format, expected 16 or 64 character hex string: </source>
@@ -140,7 +140,7 @@
     </message>
 </context>
 <context>
-    <name>Bitmonero::WalletManagerImpl</name>
+    <name>Bitsingularity::WalletManagerImpl</name>
     <message>
         <location filename="../src/wallet/api/wallet_manager.cpp" line="144"/>
         <source>failed to parse txid</source>
@@ -479,12 +479,12 @@
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="1976"/>
-        <source>failed to get a Monero address from: </source>
+        <source>failed to get a Singularity address from: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="1982"/>
-        <source>not yet supported: Multiple Monero addresses found for given URL: </source>
+        <source>not yet supported: Multiple Singularity addresses found for given URL: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1242,7 +1242,7 @@ Wallet file name (or Ctrl-C to quit): </source>
         <source>Your wallet has been generated!
 To start synchronizing with the daemon, use &quot;refresh&quot; command.
 Use &quot;help&quot; command to see the list of available commands.
-Always use &quot;exit&quot; command when closing monero-wallet-cli to save your
+Always use &quot;exit&quot; command when closing singularity-wallet-cli to save your
 current session&apos;s state. Otherwise, you might need to synchronize 
 your wallet again (your wallet keys are NOT at risk in any case).
 </source>
@@ -1355,7 +1355,7 @@ your wallet again (your wallet keys are NOT at risk in any case).
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="1956"/>
-        <source> Monero Address = </source>
+        <source> Singularity Address = </source>
         <translation type="unfinished"></translation>
     </message>
     <message>

@@ -1,4 +1,4 @@
-# Copyright (c) 2014-2016, The Monero Project
+# Copyright (c) 2014-2016, The Singularity Project
 #
 # All rights reserved.
 #
@@ -44,9 +44,9 @@ set(mnemonics_private_headers
   singleton.h
   spanish.h)
 
-monero_private_headers(mnemonics
+singularity_private_headers(mnemonics
   ${mnemonics_private_headers})
-monero_add_library(mnemonics
+singularity_add_library(mnemonics
   ${mnemonics_sources}
   ${mnemonics_headers}
   ${mnemonics_private_headers})

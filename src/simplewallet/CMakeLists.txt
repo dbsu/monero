@@ -1,4 +1,4 @@
-# Copyright (c) 2014-2016, The Monero Project
+# Copyright (c) 2014-2016, The Singularity Project
 #
 # All rights reserved.
 #
@@ -34,9 +34,9 @@ set(simplewallet_headers)
 set(simplewallet_private_headers
   simplewallet.h)
 
-monero_private_headers(simplewallet
+singularity_private_headers(simplewallet
   ${simplewallet_private_headers})
-monero_add_executable(simplewallet
+singularity_add_executable(simplewallet
   ${simplewallet_sources}
   ${simplewallet_headers}
   ${simplewallet_private_headers})
@@ -59,5 +59,5 @@ add_dependencies(simplewallet
   version)
 set_property(TARGET simplewallet
   PROPERTY
-    OUTPUT_NAME "monero-wallet-cli")
+    OUTPUT_NAME "singularity-wallet-cli")
 install(TARGETS simplewallet DESTINATION bin)

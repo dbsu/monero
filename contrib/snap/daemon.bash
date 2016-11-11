@@ -5,8 +5,8 @@ export HOME=${SNAP_DATA}
 cd ${SNAP_DATA}
 
 ARGS=
-if [ -e "${SNAP_DATA}/etc/monerod.conf" ]; then
-	ARGS="--config-file ${SNAP_DATA}/etc/monerod.conf"
+if [ -e "${SNAP_DATA}/etc/singularityd.conf" ]; then
+	ARGS="--config-file ${SNAP_DATA}/etc/singularityd.conf"
 fi
 
-exec ${SNAP}/bin/monerod --detach $ARGS
+exec ${SNAP}/bin/singularityd --detach $ARGS

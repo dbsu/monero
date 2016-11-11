@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2016, The Monero Project
+// Copyright (c) 2014-2016, The Singularity Project
 // 
 // All rights reserved.
 // 
@@ -79,8 +79,8 @@ using namespace cryptonote;
 // arbitrary, used to generate different hashes from the same input
 #define CHACHA8_KEY_TAIL 0x8c
 
-#define UNSIGNED_TX_PREFIX "Monero unsigned tx set\002"
-#define SIGNED_TX_PREFIX "Monero signed tx set\002"
+#define UNSIGNED_TX_PREFIX "Singularity unsigned tx set\002"
+#define SIGNED_TX_PREFIX "Singularity signed tx set\002"
 
 #define RECENT_OUTPUT_RATIO (0.25) // 25% of outputs are from the recent zone
 #define RECENT_OUTPUT_ZONE (5 * 86400) // last 5 days are the recent zone
@@ -2787,18 +2787,18 @@ std::vector<std::vector<cryptonote::tx_destination_entry>> split_amounts(
 } // anonymous namespace
 
 /**
- * @brief gets a monero address from the TXT record of a DNS entry
+ * @brief gets a singularity address from the TXT record of a DNS entry
  *
- * gets the monero address from the TXT record of the DNS entry associated
+ * gets the singularity address from the TXT record of the DNS entry associated
  * with <url>.  If this lookup fails, or the TXT record does not contain an
- * XMR address in the correct format, returns an empty string.  <dnssec_valid>
+ * SNG address in the correct format, returns an empty string.  <dnssec_valid>
  * will be set true or false according to whether or not the DNS query passes
  * DNSSEC validation.
  *
  * @param url the url to look up
  * @param dnssec_valid return-by-reference for DNSSEC status of query
  *
- * @return a monero address (as a string) or an empty string
+ * @return a singularity address (as a string) or an empty string
  */
 std::vector<std::string> wallet2::addresses_from_url(const std::string& url, bool& dnssec_valid)
 {
@@ -2815,7 +2815,7 @@ std::vector<std::string> wallet2::addresses_from_url(const std::string& url, boo
   }
   else dnssec_valid = false;
 
-  // for each txt record, try to find a monero address in it.
+  // for each txt record, try to find a singularity address in it.
   for (auto& rec : records)
   {
     std::string addr = address_from_txt_record(rec);

@@ -1,6 +1,6 @@
-# Monero Blockchain Utilities
+# Singularity Blockchain Utilities
 
-Copyright (c) 2014-2016, The Monero Project
+Copyright (c) 2014-2016, The Singularity Project
 
 ## Introduction
 
@@ -12,16 +12,16 @@ See also each utility's "--help" option.
 
 ### Export an existing blockchain database
 
-`$ monero-blockchain-export`
+`$ singularity-blockchain-export`
 
 This loads the existing blockchain and exports it to `$MONERO_DATA_DIR/export/blockchain.raw`
 
 ### Import the exported file
 
-`$ monero-blockchain-import`
+`$ singularity-blockchain-import`
 
 This imports blocks from `$MONERO_DATA_DIR/export/blockchain.raw` (exported using the
-`monero-blockchain-export` tool as described above) into the current database.
+`singularity-blockchain-export` tool as described above) into the current database.
 
 Defaults: `--batch on`, `--batch size 20000`, `--verify on`
 
@@ -30,14 +30,14 @@ Batch size refers to number of blocks and can be adjusted for performance based 
 Verification should only be turned off if importing from a trusted blockchain.
 
 If you encounter an error like "resizing not supported in batch mode", you can just re-run
-the `monero-blockchain-import` command again, and it will restart from where it left off.
+the `singularity-blockchain-import` command again, and it will restart from where it left off.
 
 ```bash
 ## use default settings to import blockchain.raw into database
-$ monero-blockchain-import
+$ singularity-blockchain-import
 
 ## fast import with large batch size, database mode "fastest", verification off
-$ monero-blockchain-import --batch-size 20000 --database lmdb#fastest --verify off
+$ singularity-blockchain-import --batch-size 20000 --database lmdb#fastest --verify off
 
 ```
 
@@ -80,9 +80,9 @@ LMDB flags (more than one may be specified):
 ## Examples:
 
 ```
-$ monero-blockchain-import --database lmdb#fastest
+$ singularity-blockchain-import --database lmdb#fastest
 
-$ monero-blockchain-import --database lmdb#nosync
+$ singularity-blockchain-import --database lmdb#nosync
 
-$ monero-blockchain-import --database lmdb#nosync,nometasync
+$ singularity-blockchain-import --database lmdb#nosync,nometasync
 ```

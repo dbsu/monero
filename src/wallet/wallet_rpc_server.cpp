@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2016, The Monero Project
+// Copyright (c) 2014-2016, The Singularity Project
 // 
 // All rights reserved.
 // 
@@ -1089,7 +1089,7 @@ int main(int argc, char** argv) {
 
   const auto vm = wallet_args::main(
     argc, argv,
-    "monero-wallet-rpc [--wallet-file=<file>|--generate-from-json=<file>] [--rpc-bind-port=<port>]",
+    "singularity-wallet-rpc [--wallet-file=<file>|--generate-from-json=<file>] [--rpc-bind-port=<port>]",
     desc_params,
     po::positional_options_description()
   );

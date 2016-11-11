@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2016, The Monero Project
+// Copyright (c) 2014-2016, The Singularity Project
 //
 // All rights reserved.
 //
@@ -42,7 +42,7 @@ namespace epee {
     unsigned int g_test_dbg_lock_sleep = 0;
 }
 
-namespace Bitmonero {
+namespace Bitsingularity {
 
 Wallet *WalletManagerImpl::createWallet(const std::string &path, const std::string &password,
                                     const std::string &language, bool testnet)

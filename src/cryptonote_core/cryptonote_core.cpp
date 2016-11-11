@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2016, The Monero Project
+// Copyright (c) 2014-2016, The Singularity Project
 //
 // All rights reserved.
 //
@@ -281,8 +281,8 @@ namespace cryptonote
       if (boost::filesystem::exists(old_files / "blockchain.bin"))
       {
         LOG_PRINT_RED_L0("Found old-style blockchain.bin in " << old_files.string());
-        LOG_PRINT_RED_L0("Monero now uses a new format. You can either remove blockchain.bin to start syncing");
-        LOG_PRINT_RED_L0("the blockchain anew, or use monero-blockchain-export and monero-blockchain-import to");
+        LOG_PRINT_RED_L0("Singularity now uses a new format. You can either remove blockchain.bin to start syncing");
+        LOG_PRINT_RED_L0("the blockchain anew, or use singularity-blockchain-export and singularity-blockchain-import to");
         LOG_PRINT_RED_L0("convert your existing blockchain.bin to the new format. See README.md for instructions.");
         return false;
       }
