@@ -10,28 +10,7 @@ Copyright (c) 2014-2016, The Singularity Project
 - GitHub: [https://github.com/singularity-project/singularity](https://github.com/singularity-project/singularity)
 - IRC: [#singularity-dev on Freenode](http://webchat.freenode.net/?randomnick=1&channels=%23singularity-dev&prompt=1&uio=d4)
 
-## Build
 
-| Operating System      | Processor | Status |
-| --------------------- | -------- |--------|
-| Ubuntu 16.04          |  i686    | [![Ubuntu 16.04 i686](https://build.getsingularity.org/png?builder=singularity-static-ubuntu-i686)](https://build.getsingularity.org/builders/singularity-static-ubuntu-i686)
-| Ubuntu 16.04          |  amd64   | [![Ubuntu 16.04 amd64](https://build.getsingularity.org/png?builder=singularity-static-ubuntu-amd64)](https://build.getsingularity.org/builders/singularity-static-ubuntu-amd64)
-| Ubuntu 16.04          |  armv7   | [![Ubuntu 16.04 armv7](https://build.getsingularity.org/png?builder=singularity-static-ubuntu-arm7)](https://build.getsingularity.org/builders/singularity-static-ubuntu-arm7)
-| Debian Stable         |  armv8   | [![Debian armv8](https://build.getsingularity.org/png?builder=singularity-static-debian-armv8)](https://build.getsingularity.org/builders/singularity-static-debian-armv8)
-| OSX 10.10             |  amd64   | [![OSX 10.10 amd64](https://build.getsingularity.org/png?builder=singularity-static-osx-10.10)](https://build.getsingularity.org/builders/singularity-static-osx-10.10)
-| OSX 10.11             |  amd64   | [![OSX 10.11 amd64](https://build.getsingularity.org/png?builder=singularity-static-osx-10.11)](https://build.getsingularity.org/builders/singularity-static-osx-10.11)
-| OSX 10.12             |  amd64   | [![OSX 10.12 amd64](https://build.getsingularity.org/png?builder=singularity-static-osx-10.12)](https://build.getsingularity.org/builders/singularity-static-osx-10.12)
-| FreeBSD 10.3          |  amd64   | [![FreeBSD 10.3 amd64](https://build.getsingularity.org/png?builder=singularity-static-freebsd64)](https://build.getsingularity.org/builders/singularity-static-freebsd64)
-| Windows (MSYS2/MinGW) |  i686    | [![Windows (MSYS2/MinGW) i686](https://build.getsingularity.org/png?builder=singularity-static-win32)](https://build.getsingularity.org/builders/singularity-static-win32)
-| Windows (MSYS2/MinGW) |  amd64   | [![Windows (MSYS2/MinGW) amd64](https://build.getsingularity.org/png?builder=singularity-static-win64)](https://build.getsingularity.org/builders/singularity-static-win64)
-
-## Coverage
-
-| Type      | Status |
-|-----------|--------|
-| Coverity  | [![Coverity Status](https://scan.coverity.com/projects/9657/badge.svg)](https://scan.coverity.com/projects/9657/)
-| Coveralls | [![Coveralls Status](https://coveralls.io/repos/github/singularity-project/singularity/badge.svg?branch=master)](https://coveralls.io/github/singularity-project/singularity?branch=master)
-| License   | [![License](https://img.shields.io/badge/license-BSD3-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
 ## Introduction
 
@@ -43,7 +22,7 @@ Singularity is a private, secure, untraceable, decentralised digital currency ba
 
 **Untraceability:** By taking advantage of ring signatures, a special property of a certain type of cryptography, Singularity is able to ensure that transactions are not only untraceable, but have an optional measure of ambiguity that ensures that transactions cannot easily be tied back to an individual user or computer.
 
-**Asic/Botnet protection** Zcash mining algorithm provides great anti-asic and anti-botnet protection. So Currency will be backed by real mining power, and no botnets/asics will be able to mine and dump this cryptocurrency. Thats gives us good price stability and profits from GPU mining.
+**Asic/Botnet protection:** Zcash mining algorithm provides great anti-asic and anti-botnet protection. So Currency will be backed by real mining power, and no botnets/asics will be able to mine and dump this cryptocurrency. Thats gives us good price stability and profits from GPU mining.
 
 ## About this Project
 
