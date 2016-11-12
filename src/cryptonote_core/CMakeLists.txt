@@ -54,7 +54,7 @@ set(cryptonote_core_private_headers
   cryptonote_format_utils.h
   cryptonote_stat_info.h
   difficulty.h
-  miner.h
+  equi_miner.h
   tx_extra.h
   tx_pool.h
   verification_context.h

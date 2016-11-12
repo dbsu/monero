@@ -106,6 +106,7 @@ add_subdirectory(rpc)
 add_subdirectory(wallet)
 add_subdirectory(p2p)
 add_subdirectory(cryptonote_protocol)
+add_subdirectory(pow)
 
 add_subdirectory(simplewallet)
 add_subdirectory(daemonizer)

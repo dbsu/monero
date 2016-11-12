@@ -57,7 +57,8 @@ set(common_private_headers
   i18n.h
   perf_timer.h
   stack_trace.h
-  thread_group.h)
+  thread_group.h
+  osx_barrier.h)
 
 singularity_private_headers(common
   ${common_private_headers})

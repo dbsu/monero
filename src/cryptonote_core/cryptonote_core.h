@@ -41,7 +41,7 @@
 #include "storages/portable_storage_template_helper.h"
 #include "tx_pool.h"
 #include "blockchain.h"
-#include "miner.h"
+#include "pow/tromp/equi_miner.h"
 #include "connection_context.h"
 #include "cryptonote_core/cryptonote_stat_info.h"
 #include "warnings.h"

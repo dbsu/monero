@@ -45,7 +45,7 @@
 
 using namespace epee;
 
-#include "miner.h"
+#include "pow/tromp/equi_miner.h"
 
 
 extern "C" void slow_hash_allocate_state();

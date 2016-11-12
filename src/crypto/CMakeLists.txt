@@ -66,7 +66,8 @@ set(crypto_private_headers
   oaes_lib.h
   random.h
   skein.h
-  skein_port.h)
+  skein_port.h
+  equi.h)
 
 singularity_private_headers(crypto
   ${crypto_private_headers})

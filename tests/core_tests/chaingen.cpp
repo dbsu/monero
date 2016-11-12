@@ -40,7 +40,7 @@
 #include "cryptonote_core/cryptonote_basic.h"
 #include "cryptonote_core/cryptonote_basic_impl.h"
 #include "cryptonote_core/cryptonote_format_utils.h"
-#include "cryptonote_core/miner.h"
+#include "pow/tromp/equi_miner.h"
 
 #include "chaingen.h"
 

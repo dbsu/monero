@@ -42,7 +42,7 @@
 #include "cryptonote_format_utils.h"
 #include "cryptonote_boost_serialization.h"
 #include "cryptonote_config.h"
-#include "miner.h"
+#include "pow/tromp/equi_miner.h"
 #include "misc_language.h"
 #include "profile_tools.h"
 #include "file_io_utils.h"
